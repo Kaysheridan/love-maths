@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded" ,function() {
         button.addEventListener("click", function() {
             if (this.getAttribute("data-type") === "submit") {
                 checkAnswer();
-            } else {
+             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
             }
@@ -29,6 +29,8 @@ function runGame(gameType) {
 
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
+    } else if (gameType === "multiply") {
+        displayMultiplyQuestion(num1, num2);
     } else {
         alert(`Unknown game type: ${gameType}`);
         throw `Unknown game type: ${gameType}.Aborting!`;
